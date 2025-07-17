@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Etapa 5</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <h2>ETAPA 5</h2>
+    <img src="etapa5.png" alt="Enigma da Etapa 5" class="enigma-img">
+    <input type="text" id="resposta" placeholder="Digite a resposta">
+    <button onclick="verificarResposta()">Enviar</button>
+    <div id="error"></div>
+  </div>
+
+  <script>
+    function verificarResposta() {
+      const resposta = document.getElementById("resposta").value.trim().toLowerCase();
+      const senhaCorreta = "senha5";
+      if (resposta === senhaCorreta) {
+        window.location.href = "etapa6.html";
+      } else {
+        document.getElementById("error").textContent = "Resposta incorreta. Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>

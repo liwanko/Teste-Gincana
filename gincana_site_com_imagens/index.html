@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Início da Gincana</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gincana Virtual - Etapa Inicial</h1>
+    <p>Bem-vindo(a)! Para começar a gincana, digite a senha de acesso:</p>
+    <input type="text" id="senha" placeholder="Digite a senha">
+    <button onclick="verificarSenha()">Começar</button>
+    <div id="error"></div>
+  </div>
+
+  <script>
+    function verificarSenha() {{
+      const senha = document.getElementById("senha").value.trim();
+      const senhaCorreta = "GI@ VIRTUAL";
+      if (senha === senhaCorreta) {{
+        window.location.href = "etapa1.html";
+      }} else {{
+        document.getElementById("error").textContent = "Senha incorreta. Tente novamente.";
+      }}
+    }}
+  </script>
+</body>
+</html>
